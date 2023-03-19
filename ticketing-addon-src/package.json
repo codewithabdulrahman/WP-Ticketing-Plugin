@@ -1,0 +1,54 @@
+{
+  "name": "ticketing-addon-src",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "date-fns": "^2.28.0",
+    "i18n": "0.8.5",
+    "i18next": "19.1.0",
+    "i18next-xhr-backend": "^3.2.2",
+    "lodash": "^4.17.21",
+    "react": "^18.1.0",
+    "react-barcodes": "^1.2.0",
+    "react-csv": "^2.2.2",
+    "react-data-table-component": "^7.5.2",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "^18.1.0",
+    "react-i18next": "11.3.1",
+    "react-nice-dates": "^3.1.0",
+    "react-scripts": "5.0.1",
+    "react-tinder-card": "^1.4.5",
+    "react-to-print": "^2.14.7",
+    "react-webcam": "^7.0.1",
+    "rewire": "^6.0.0",
+    "styled-components": "^5.3.5",
+    "watch": "^1.0.2"
+  },
+  "scripts": {
+    "start": "node ./scripts/start-non-split.js",
+    "build": "node ./scripts/build-non-split.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

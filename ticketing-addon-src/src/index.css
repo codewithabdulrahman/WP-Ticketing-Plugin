@@ -1,0 +1,426 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.view-cal {
+    margin: 5px;
+    border: 2px solid #efefef;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.view-cal input {
+    border: 0px;
+}
+
+.view-container {
+    background: white;
+    padding: 31px;
+}
+
+.view-cal a {
+    text-decoration: none;
+    color: black;
+}
+
+.date-range {
+    width: 10%;
+}
+
+/* Print Section*/
+.print-source {
+    display: none;
+}
+
+body > .print-source {
+    display: block;
+}
+
+@media print {
+    .print-source {
+        display: block;
+    }
+}
+
+/* End Print Section*/
+.print-doc-button {
+    width: auto;
+    background: #fff;
+    border: 1px solid grey;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding: 6px 15px 6px 15px;
+    cursor: pointer;
+}
+
+.button-del-all {
+    font-weight: 600;
+    font-size: 17px;
+    background: red;
+    margin: auto;
+    width: auto;
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .column {
+        text-align: center !important;
+        width: auto !important;
+        padding: initial !important;
+        height: auto !important;
+        float:none !important;
+    }
+    .action-responsive {
+        text-align: center !important;
+        display: grid !important;
+        width: 100% !important;
+    }
+
+    .view-cal {
+        border: 0px;
+    }
+
+    #filter-by {
+        border: 1px solid #000000 !important;
+    }
+
+    select#filter-status {
+        width: 37%;
+    }
+
+    .view-cal input {
+        width: 37%;
+        min-height: 40px;
+        font-size: 16px;
+        line-height: 1.625;
+        padding: 5px 24px 5px 8px;
+        border: 1px solid #000000 !important;
+    }
+    .view-cal input, select {
+        margin: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 1059px) {
+    .action-responsive {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    .view-cal input, select {
+        margin: 48px;
+    }
+    #filter-by{
+        margin: auto;
+        min-height: auto !important;
+    }
+
+}@media only screen and (max-width: 1050px) {
+    .date-range{
+        width:22% !important;
+    }
+
+}
+
+.button-read-all {
+    font-weight: 600;
+    font-size: 17px;
+    background: blue;
+    margin: auto;
+    width: auto;
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    text-align: center;
+    float: left;
+    width: 50%;
+    padding: 31px;
+    height: auto;
+}
+
+.nice-dates-popover.-open {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: static !important;
+    width: 70% !important;
+}
+
+.form-group {
+    width: 100%;
+    padding: 15px;
+}
+
+.form-input {
+    background-color: #b3b4b529 !important;
+    width: 70%;
+    border: none !important;
+    font-size: 19px !important;
+}
+
+.margin-left-7 {
+    margin-left: 7%;
+}
+
+.form-input::placeholder {
+    margin: 1px;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    background-color: white;
+}
+
+.image-uploader {
+    margin: auto;
+    text-align: center;
+    border: 4px dashed #c3c4c7;
+    width: 70%;
+    padding: 13px;
+    cursor: pointer;
+}
+
+.btn {
+    width: 46%;
+    padding: 4px;
+    margin-top: 18px;
+}
+
+.btn-float-left {
+    float: left;
+}
+
+.btn-float-right {
+    float: right;
+}
+
+.from-btn-container {
+    cursor: pointer;
+    width: 70%;
+    margin: auto;
+}
+
+.plus {
+    font-size: 100px;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    color: #9f9f9f;
+    border: 1px dashed #c3c4c7;
+}
+
+.plus::before {
+    display: block;
+    content: '+';
+}
+
+.form-group-option {
+    padding: 28px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.phone-number-type {
+    margin: auto;
+    width: 70%;
+    padding: 13px;
+}
+
+.bar-code-view {
+    width: 8%;
+}
+
+.bar-code-edit {
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    padding: 13px;
+    cursor: pointer;
+}
+
+.span-button {
+    width: auto;
+    background: #fff;
+    border: 1px solid grey;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding: 6px 15px 6px 15px;
+}
+
+.form-group-option button {
+    width: 20%;
+    padding: 4px;
+    margin-top: 18px;
+}
+
+.hidden_content {
+    display: none;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #362f2f transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.image-uploader img {
+    width: 100%;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+#filter-by {
+    border: 0px;
+    margin-top: -5px;
+}
+
+#filter-by:hover {
+    border: 0px;
+}
+
+#list_ticket_addon .rdt_Table button {
+    background: #fff;
+    border: 1px solid grey;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding: 3px 5px 3px 5px;
+}
+
+.unset-overflow {
+    overflow: unset !important;
+    text-overflow: unset !important;
+}
+
+#list_ticket_addon .rdt_Table span {
+    background: #fff !important;
+    border: 1px solid grey !important;
+    font-weight: 500 !important;
+    border-radius: 5px !important;
+    margin-right: 5px !important;
+    padding: 3px 5px 3px 5px !important;
+}
+
+.config-ticket {
+    padding: 30px;
+}
+
+.config-ticket button {
+    background: #fff;
+    border: 1px solid grey;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding: 6px 15px 6px 15px;
+}
+
+#save_rules .form-group input {
+    width: 100%;
+}
+
+.config-ticket .title {
+    margin-bottom: 10px;
+}
+
+.save-ticket button {
+    width: auto;
+    background: #fff;
+    border: 1px solid grey;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding: 6px 15px 6px 15px;
+}
